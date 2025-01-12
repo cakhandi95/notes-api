@@ -1,0 +1,31 @@
+1. Membuat & konfigurasi database postgres  
+    - psql --username postgres
+    - CREATE DATABASE notesapp
+    - GRANT ALL DATABASE notesapp TO developer;
+    - ALTER DATABASE notesapp OWNER to developer;
+
+2. Install package postgres di node.js
+    - npm Install pg.
+
+3. konfigurasi env 
+    - npm install dotenv
+    - env untuk development
+    - .prod.env
+
+4. konfigurasi teknis migrate untuk buat tabel notes
+    - npm install node-pg-migrate
+    - npm run migrate create "create table notes"
+    - npm run migrate up ()
+
+5. konfigurasi NoteServices.js
+    - Membuat object Pool yang di ambil dari require('pg');
+    - Membuat function addNotes
+    - Membuat function getNotes(), untuk menghindari bug agar dilakukan mapping objek di buat di directory utils/index.js
+    - Membuat function getNoteById(),
+    - Membuat function editNoteById(),
+    - Membuat function deleteNoteById()
+
+
+    
+
+

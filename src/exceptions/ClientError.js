@@ -5,3 +5,4 @@ class ClientError extends Error {
     this.name = "ClientError";
   }
 }
+module.exports = ClientError;
