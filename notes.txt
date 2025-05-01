@@ -25,6 +25,38 @@
     - Membuat function editNoteById(),
     - Membuat function deleteNoteById()
 
+---------------------
+
+api/notes/
+Berisi logika untuk menangani endpoint terkait catatan:
+handler.js: Mengelola fungsi utama yang menangani permintaan (request) dan respons (response).
+index.js: Menginisialisasi modul dan menghubungkannya ke server.
+routes.js: Mendefinisikan daftar rute (routes) untuk API catatan.
+
+exceptions/
+Berisi kelas khusus untuk menangani berbagai jenis kesalahan:
+ClientError.js: Menangani kesalahan umum dari pengguna.
+InvariantError.js: Menangani pelanggaran aturan bisnis.
+NotFoundError.js: Menangani permintaan ke sumber daya yang tidak ditemukan.
+server.js
+
+File utama untuk menginisialisasi dan menjalankan server Node.js.
+services/
+Berisi logika untuk mengelola data:
+inMemory/NotesService.js: Implementasi layanan yang menggunakan penyimpanan sementara (in-memory).
+postgres/NotesService.js: Implementasi layanan yang menggunakan PostgreSQL.
+
+utils/
+Berisi utilitas umum, misalnya fungsi atau helper yang digunakan di banyak bagian aplikasi.
+
+validator/notes/
+Berisi logika validasi data terkait catatan:
+index.js: Menghubungkan validasi dengan modul lainnya.
+schema.js: Mendefinisikan skema validasi untuk data.
+
+.DS_Store
+File sistem macOS yang menyimpan metadata folder, tidak relevan untuk aplikasi.
+
 
     
 
