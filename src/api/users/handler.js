@@ -9,6 +9,7 @@ class UsersHandler {
 
   async postUserHandler(request, h) {
     try {
+      console.log("postUserHandler: ", request.payload);
       this._validator.validatePostUserPayload(request.payload);
       const { username, password, fullname } = request.payload;
       const userId = await this._service.addUser({
@@ -26,6 +27,7 @@ class UsersHandler {
       response.code(201);
       return response;
     } catch (error) {
+      console.log("postUserHandler: ", error);
       return this._handleError(error);
     }
   }
