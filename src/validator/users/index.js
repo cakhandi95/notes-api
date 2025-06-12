@@ -1,3 +1,4 @@
+const { default: mod } = require("@hapi/jwt");
 const InvariantError = require("../../exceptions/InvariantError");
 const { UserPayloadSchema } = require("./schema");
 
@@ -9,3 +10,5 @@ const UsersValidator = {
     }
   },
 };
+
+module.exports = UsersValidator;
